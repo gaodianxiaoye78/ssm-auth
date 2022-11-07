@@ -6,7 +6,7 @@
     <resultMap id="roleMap" type="com.mrj.model.system.SysRole" autoMapping="true"/>
 
     <select id="selectRoleList" resultMap="roleMap">
-        SELECT id, role_name, role_code, description
+        SELECT id, role_name, role_code, description, create_time
         FROM sys_role
         <where>
             <if test="vo.id != null">

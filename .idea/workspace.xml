@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e3a4a2d-1c9c-44a8-8cb7-73314262b75c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/system-service/src/main/java/com/mrj/system/controller/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system-service/src/main/java/com/mrj/system/controller/SysRoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/system-service/src/main/java/com/mrj/system/controller/SysRoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system-service/src/main/resources/mapper/SysRoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/system-service/src/main/resources/mapper/SysRoleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system-service/target/classes/com/mrj/system/controller/SysRoleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/system-service/target/classes/com/mrj/system/controller/SysRoleController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,6 +130,7 @@
       <workItem from="1667737441438" duration="2203000" />
       <workItem from="1667828653650" duration="1189000" />
       <workItem from="1667832226756" duration="436000" />
+      <workItem from="1667832683087" duration="1848000" />
     </task>
     <task id="LOCAL-00001" summary="1.完成分页查询&#10;2.完成统一异常处理">
       <created>1667717469979</created>
