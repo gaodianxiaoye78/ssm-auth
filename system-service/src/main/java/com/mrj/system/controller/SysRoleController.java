@@ -53,10 +53,16 @@ public class SysRoleController {
     }
 
 
+    @ApiOperation("根据id查询")
+    @PostMapping("findRoleById/{id}")
+    public Result findRoleById(@PathVariable Long id) {
+        SysRole sysRole = sysRoleService.getById(id);
+        return Result.ok(sysRole);
+    }
+
     @ApiOperation("查询所有角色信息")
     @GetMapping("findAll")
     public Result findAllRoles() {
-        int i = 10 / 0;
         List<SysRole> roles = sysRoleService.list();
         return Result.ok(roles);
     }
