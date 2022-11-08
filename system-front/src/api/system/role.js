@@ -18,7 +18,7 @@ export default {
     removeId(id) {
         return request({
             //接口路径
-            url: `${api_name}/remove/${id}`,
+            url: `${api_name}/deleteRole/${id}`,
             method: 'delete' //提交方式
         })
     },
@@ -26,10 +26,10 @@ export default {
     saveRole(role) {
         return request({
             //接口路径
-            url: `${api_name}/save`,
+            url: `${api_name}/saveRole`,
             method: 'post', //提交方式
             //传递json格式
-            data: role
+            role
         })
     },
     //根据id查询
@@ -44,8 +44,8 @@ export default {
     update(role) {
         return request({
             //接口路径
-            url: `${api_name}/update`,
-            method: 'post', //提交方式
+            url: `${api_name}/modifyRole`,
+            method: 'put', //提交方式
             data: role
         })
     },
