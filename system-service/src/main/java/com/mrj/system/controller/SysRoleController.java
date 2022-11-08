@@ -20,6 +20,14 @@ public class SysRoleController {
     private SysRoleService sysRoleService;
 
 
+    @ApiOperation("批量删除角色信息")
+    @DeleteMapping("batchRemove")
+    public Result batchRemove(@RequestBody List<Long> ids) {
+        sysRoleService.removeByIds(ids);
+        return Result.ok();
+    }
+
+
     @ApiOperation("逻辑删除角色信息")
     @DeleteMapping("deleteRole/{id}")
     public Result deleteRole(@PathVariable("id") Long id) {

@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1e3a4a2d-1c9c-44a8-8cb7-73314262b75c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/system-service/src/main/java/com/mrj/system/controller/SysRoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/system-service/src/main/java/com/mrj/system/controller/SysRoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system-service/src/main/resources/mapper/SysRoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/system-service/src/main/resources/mapper/SysRoleMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/system-service/target/classes/com/mrj/system/controller/SysRoleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/system-service/target/classes/com/mrj/system/controller/SysRoleController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -130,7 +129,8 @@
       <workItem from="1667737441438" duration="2203000" />
       <workItem from="1667828653650" duration="1189000" />
       <workItem from="1667832226756" duration="436000" />
-      <workItem from="1667832683087" duration="1848000" />
+      <workItem from="1667832683087" duration="3998000" />
+      <workItem from="1667914722704" duration="5945000" />
     </task>
     <task id="LOCAL-00001" summary="1.完成分页查询&#10;2.完成统一异常处理">
       <created>1667717469979</created>
@@ -139,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667717469979</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="1.补充根据id查找角色信息接口">
+      <created>1667918254974</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1667918254974</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,6 +154,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1.完成分页查询&#10;2.完成统一异常处理" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.完成分页查询&#10;2.完成统一异常处理" />
+    <MESSAGE value="1.补充根据id查找角色信息接口" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.补充根据id查找角色信息接口" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/system-service/src/main/java/com/mrj/system/controller/SysRoleController.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
