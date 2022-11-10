@@ -9,7 +9,8 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler({Exception.class})
     public Result globalError(Exception e) {
-        return Result.fail().message("出现未知异常，请联系管理员");
+        e.printStackTrace();
+        return Result.fail().message("出现未知异常，请联系管理员mrj");
     }
 
 

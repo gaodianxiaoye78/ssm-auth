@@ -4,20 +4,40 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.mrj.common.result.Result;
 import com.mrj.model.system.SysRole;
+import com.mrj.model.vo.AssginRoleVo;
 import com.mrj.model.vo.SysRoleQueryVo;
 import com.mrj.system.service.SysRoleService;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
+@Api(tags = "角色管理接口")
 @RestController
 @RequestMapping("/admin/system/sysRole")
 public class SysRoleController {
 
     @Autowired
     private SysRoleService sysRoleService;
+
+
+    @ApiOperation("用户分配角色")
+    @PostMapping("doAssign")
+    public Result doAssign(@RequestBody AssginRoleVo assginRoleVo) {
+        sysRoleService.doAssign(assginRoleVo);
+        return Result.ok();
+    }
+
+
+    @ApiOperation("获取用户的角色数据")
+    @GetMapping("toAssign/{userId}")
+    public Result toAssign(@PathVariable String userId) {
+        Map<String,Object> roleMap = sysRoleService.getRolesByUserId(userId);
+        return Result.ok(roleMap);
+    }
 
 
     @ApiOperation("批量删除角色信息")
