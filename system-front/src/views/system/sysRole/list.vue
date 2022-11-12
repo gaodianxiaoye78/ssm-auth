@@ -150,7 +150,7 @@ export default {
     saveOrUpdate() {
       //判断添加还是修改
       if (!this.sysRole.id) {
-        console.log(JSON.stringify(this.sysRole))
+        console.log(JSON.stringify(this.sysRole));
         //添加
         this.saveRole();
       } else {
@@ -187,8 +187,8 @@ export default {
     },
     //点击添加，弹出框
     add() {
-      this.dialogVisible = true;
       this.sysRole = {};
+      this.dialogVisible = true;
     },
     //删除
     removeDataById(id) {
