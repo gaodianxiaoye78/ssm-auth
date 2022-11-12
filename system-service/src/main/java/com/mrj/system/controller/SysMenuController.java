@@ -27,20 +27,20 @@ public class SysMenuController {
     @Autowired
     private SysMenuService sysMenuService;
 
-//    @ApiOperation("给角色分配菜单权限")
-//    @PostMapping("/doAssign")
-//    public Result doAssign(@RequestBody AssginMenuVo assginMenuVo) {
-//        sysMenuService.doAssign(assginMenuVo);
-//        return Result.ok();
-//    }
+    @ApiOperation("给角色分配菜单权限")
+    @PostMapping("/doAssign")
+    public Result doAssign(@RequestBody AssginMenuVo assginMenuVo) {
+        sysMenuService.doAssign(assginMenuVo);
+        return Result.ok();
+    }
 
-    //根据角色分配菜单
-//    @ApiOperation("根据角色获取菜单")
-//    @GetMapping("/toAssign/{roleId}")
-//    public Result toAssign(@PathVariable String roleId) {
-//        List<SysMenu> list = sysMenuService.findMenuByRoleId(roleId);
-//        return Result.ok(list);
-//    }
+    // 根据角色分配菜单
+    @ApiOperation("根据角色获取菜单")
+    @GetMapping("/toAssign/{roleId}")
+    public Result toAssign(@PathVariable String roleId) {
+        List<SysMenu> sysMenus = sysMenuService.findMenuByRoleId(roleId);
+        return Result.ok(sysMenus);
+    }
 
     //菜单列表（树形）
     @ApiOperation("菜单列表")

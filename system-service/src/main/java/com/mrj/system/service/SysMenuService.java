@@ -2,6 +2,7 @@ package com.mrj.system.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.mrj.model.system.SysMenu;
+import com.mrj.model.vo.AssginMenuVo;
 
 import java.util.List;
 
@@ -18,4 +19,8 @@ public interface SysMenuService extends IService<SysMenu> {
     List<SysMenu> findNodes();
 
     void removeMenuById(String id);
+
+    List<SysMenu> findMenuByRoleId(String roleId);
+
+    void doAssign(AssginMenuVo assginMenuVo);
 }
