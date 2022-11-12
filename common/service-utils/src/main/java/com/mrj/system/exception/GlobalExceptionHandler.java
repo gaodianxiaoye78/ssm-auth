@@ -13,5 +13,12 @@ public class GlobalExceptionHandler {
         return Result.fail().message("出现未知异常，请联系管理员mrj");
     }
 
+    @ExceptionHandler(OperationException.class)
+    public Result operationError(OperationException e) {
+        e.printStackTrace();
+        return Result.fail().code(e.getCode()).message(e.getMsg());
+    }
+
+
 
 }
