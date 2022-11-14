@@ -29,7 +29,7 @@ export default {
             url: `${api_name}/saveRole`,
             method: 'post', //提交方式
             //传递json格式
-            role
+            data: role
         })
     },
     //根据id查询
