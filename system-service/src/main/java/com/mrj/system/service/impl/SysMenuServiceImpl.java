@@ -3,19 +3,19 @@ package com.mrj.system.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.mrj.common.result.ResultCodeEnum;
 import com.mrj.model.system.SysMenu;
-import com.mrj.model.system.SysRole;
 import com.mrj.model.system.SysRoleMenu;
 import com.mrj.model.vo.AssginMenuVo;
+import com.mrj.model.vo.RouterVo;
 import com.mrj.system.exception.OperationException;
 import com.mrj.system.mapper.SysMenuMapper;
 import com.mrj.system.mapper.SysRoleMenuMapper;
 import com.mrj.system.service.SysMenuService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.mrj.system.utils.RouterHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
-import javax.management.OperationsException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -94,6 +94,37 @@ public class SysMenuServiceImpl extends ServiceImpl<SysMenuMapper, SysMenu> impl
             sysRoleMenu.setMenuId(menuId);
             sysRoleMenuMapper.insert(sysRoleMenu);
         });
+    }
+
+    @Override
+    public List<RouterVo> getUserMenuList(String userId, String username) {
+        List<SysMenu> menus;
+        // 判断账号是否为超级管理员，如果是则获得所有菜单权限
+        if ("admin".equals(username)) {
+            QueryWrapper<SysMenu> wrapper = new QueryWrapper<>();
+            wrapper.eq("status", 1);
+            wrapper.orderByAsc("sort_value");
+            menus = baseMapper.selectList(wrapper);
+        } else {
+            // 根据userId查询用户所拥有的菜单权限
+            menus = baseMapper.findMenuListUserId(userId);
+        }
+        List<SysMenu> menuTree = buildTree(menus);
+        return RouterHelper.buildRouters(menuTree);
+    }
+
+    @Override
+    public List<String> getUserButtonList(String userId, String username) {
+        QueryWrapper<SysMenu> wrapper = new QueryWrapper<>();
+        wrapper.eq("status", 1);
+        List<SysMenu> menus = "admin".equals(username) ? baseMapper.selectList(wrapper) : baseMapper.findMenuListUserId(userId);
+        List<String> result = new ArrayList<>();
+        menus.forEach(menu -> {
+            if (menu.getType() == 2) {
+                result.add(menu.getPerms());
+            }
+        });
+        return result;
     }
 
     private List<SysMenu> buildTree(List<SysMenu> sysMenuList) {

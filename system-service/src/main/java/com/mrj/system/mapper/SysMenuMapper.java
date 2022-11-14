@@ -2,6 +2,9 @@ package com.mrj.system.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.mrj.model.system.SysMenu;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +16,5 @@ import com.mrj.model.system.SysMenu;
  */
 public interface SysMenuMapper extends BaseMapper<SysMenu> {
 
+    List<SysMenu> findMenuListUserId(@Param("userId") String userId);
 }
