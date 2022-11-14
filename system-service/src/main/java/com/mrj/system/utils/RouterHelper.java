@@ -22,7 +22,7 @@ public class RouterHelper {
      * @return
      */
     public static List<RouterVo> buildRouters(List<SysMenu> menus) {
-        List<RouterVo> routers = new LinkedList<RouterVo>();
+        List<RouterVo> routers = new LinkedList<>();
         for (SysMenu menu : menus) {
             RouterVo router = new RouterVo();
             router.setHidden(false);

@@ -2,6 +2,7 @@ package com.mrj.system.controller;
 
 import com.mrj.common.result.Result;
 import com.mrj.common.utils.JwtHelper;
+import com.mrj.common.utils.MD5;
 import com.mrj.model.system.SysUser;
 import com.mrj.model.vo.LoginVo;
 import com.mrj.system.exception.OperationException;
@@ -28,7 +29,7 @@ public class IndexController {
     @PostMapping("login")
     public Result login(@RequestBody LoginVo loginVo) {
         String username = loginVo.getUsername();
-        String password = loginVo.getPassword();
+        String password = MD5.encrypt(loginVo.getPassword());
         SysUser user = sysUserService.getUserInfoByUserName(username);
         if (user == null || !user.getPassword().equals(password)) {
             throw new OperationException(20001, "用户名或密码错误");
