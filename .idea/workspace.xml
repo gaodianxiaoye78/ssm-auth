@@ -5,8 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e3a4a2d-1c9c-44a8-8cb7-73314262b75c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/common/spring-security/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/spring-security/src/main/java/com/mrj/system/config/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/spring-security/src/main/java/com/mrj/system/custom/CustomMd5PasswordEncoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/spring-security/src/main/java/com/mrj/system/custom/CustomUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/spring-security/src/main/java/com/mrj/system/filter/TokenAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/spring-security/src/main/java/com/mrj/system/filter/TokenLoginFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/system-service/src/main/java/com/mrj/system/service/impl/UserDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/common-utils/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/common-utils/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/common-utils/src/main/java/com/mrj/common/result/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/common-utils/src/main/java/com/mrj/common/result/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/common-utils/target/classes/com/mrj/common/result/Result.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/common-utils/target/classes/com/mrj/common/result/Result.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/service-utils/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/service-utils/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/service-utils/src/main/java/com/mrj/system/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/service-utils/src/main/java/com/mrj/system/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/service-utils/target/classes/com/mrj/system/exception/GlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/service-utils/target/classes/com/mrj/system/exception/GlobalExceptionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/system-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system-service/src/main/java/com/mrj/system/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/system-service/src/main/java/com/mrj/system/controller/IndexController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/system-service/src/main/java/com/mrj/system/controller/SysRoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/system-service/src/main/java/com/mrj/system/controller/SysRoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system-service/src/main/java/com/mrj/system/service/impl/SysUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/system-service/src/main/java/com/mrj/system/service/impl/SysUserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system-service/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/system-service/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system-service/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/system-service/target/classes/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system-service/target/classes/com/mrj/system/controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/system-service/target/classes/com/mrj/system/controller/IndexController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/system-service/target/classes/com/mrj/system/controller/SysRoleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/system-service/target/classes/com/mrj/system/controller/SysRoleController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system-service/target/classes/com/mrj/system/service/impl/SysUserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/system-service/target/classes/com/mrj/system/service/impl/SysUserServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +38,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="mapper" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -33,6 +55,14 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -66,7 +96,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/common/service-utils/src/main/java/com/mrj/system/config" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/common/spring-security/src/main/java/com/mrj/system/filter" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -74,14 +105,48 @@
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\IdeaProjects\ssm-auth\common\spring-security\src\main\java\com\mrj\system\filter" />
+      <recent name="E:\IdeaProjects\ssm-auth\system-service\src\main\java\com\mrj\system\utils" />
+      <recent name="E:\IdeaProjects\ssm-auth\system-service\src\main\java\com\mrj\system\mapper" />
+      <recent name="E:\IdeaProjects\ssm-auth\system-service\src\test\java\com\mrj\system" />
       <recent name="E:\IdeaProjects\ssm-auth\common\service-utils\src\main\java\com\mrj\system\config" />
-      <recent name="E:\IdeaProjects\ssm-auth\common\common-utils\src\main\java" />
-      <recent name="E:\IdeaProjects\ssm-auth\common\common-utils" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\IdeaProjects\ssm-auth\system-service\src\main\resources\mapper" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.ServiceAuthApplication">
+    <configuration name="CodeGet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mrj.system.CodeGet" />
+      <module name="system-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mrj.system.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JwtHelper" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mrj.common.utils.JwtHelper" />
+      <module name="common-utils" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mrj.common.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -109,7 +174,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.ServiceAuthApplication" />
-        <item itemvalue="Spring Boot.ServiceAuthApplication" />
+        <item itemvalue="Application.JwtHelper" />
+        <item itemvalue="Application.CodeGet" />
         <item itemvalue="Spring Boot.ServiceAuthApplication" />
         <item itemvalue="Spring Boot.ServiceAuthApplication" />
       </list>
@@ -130,7 +196,18 @@
       <workItem from="1667828653650" duration="1189000" />
       <workItem from="1667832226756" duration="436000" />
       <workItem from="1667832683087" duration="3998000" />
-      <workItem from="1667914722704" duration="5945000" />
+      <workItem from="1667914722704" duration="7655000" />
+      <workItem from="1667923359279" duration="197000" />
+      <workItem from="1668003056854" duration="4880000" />
+      <workItem from="1668085971474" duration="3459000" />
+      <workItem from="1668169742072" duration="1057000" />
+      <workItem from="1668220500769" duration="11714000" />
+      <workItem from="1668341463506" duration="3454000" />
+      <workItem from="1668441621664" duration="1636000" />
+      <workItem from="1668512940905" duration="3523000" />
+      <workItem from="1668688582648" duration="2578000" />
+      <workItem from="1668845265335" duration="390000" />
+      <workItem from="1668845810190" duration="8214000" />
     </task>
     <task id="LOCAL-00001" summary="1.完成分页查询&#10;2.完成统一异常处理">
       <created>1667717469979</created>
@@ -146,7 +223,42 @@
       <option name="project" value="LOCAL" />
       <updated>1667918254974</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="1.完成用户管理接口">
+      <created>1668093163440</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668093163440</updated>
+    </task>
+    <task id="LOCAL-00004" summary="1.完成菜单管理接口">
+      <created>1668239489845</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1668239489845</updated>
+    </task>
+    <task id="LOCAL-00005" summary="1.完成根据角色id分配菜单接口">
+      <created>1668245055987</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1668245055987</updated>
+    </task>
+    <task id="LOCAL-00006" summary="1.修改用户登录接口&#10;2.修改获取登录用户信息接口">
+      <created>1668442456666</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1668442456666</updated>
+    </task>
+    <task id="LOCAL-00007" summary="1.修复了用户登录时密码校验的问题，用户密码进行MD5加密后再与数据库中的密码进行比对">
+      <created>1668446617125</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1668446617125</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,15 +267,20 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1.完成分页查询&#10;2.完成统一异常处理" />
     <MESSAGE value="1.补充根据id查找角色信息接口" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.补充根据id查找角色信息接口" />
+    <MESSAGE value="1.完成用户管理接口" />
+    <MESSAGE value="1.完成菜单管理接口" />
+    <MESSAGE value="1.完成根据角色id分配菜单接口" />
+    <MESSAGE value="1.修改用户登录接口&#10;2.修改获取登录用户信息接口" />
+    <MESSAGE value="1.修复了用户登录时密码校验的问题，用户密码进行MD5加密后再与数据库中的密码进行比对" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.修复了用户登录时密码校验的问题，用户密码进行MD5加密后再与数据库中的密码进行比对" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/system-service/src/main/java/com/mrj/system/controller/SysRoleController.java</url>
-          <line>48</line>
-          <option name="timeStamp" value="2" />
+          <url>file://$PROJECT_DIR$/common/spring-security/src/main/java/com/mrj/system/filter/TokenLoginFilter.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -12,6 +12,13 @@
     <artifactId>system-service</artifactId>
 
     <dependencies>
+
+        <dependency>
+            <groupId>com.mrj</groupId>
+            <artifactId>spring-security</artifactId>
+            <version>1.0</version>
+        </dependency>
+
         <dependency>
             <groupId>com.mrj</groupId>
             <artifactId>service-utils</artifactId>

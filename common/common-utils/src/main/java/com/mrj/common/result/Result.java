@@ -25,9 +25,9 @@ public class Result<T> {
         return result;
     }
 
-    public static <T> Result<T> build(T body, Integer code, String message) {
+    public static <T> Result<T> build(T body, ResultCodeEnum resultCodeEnum, String message) {
         Result<T> result = build(body);
-        result.setCode(code);
+        result.setCode(resultCodeEnum.getCode());
         result.setMessage(message);
         return result;
     }

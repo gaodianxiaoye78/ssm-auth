@@ -4,7 +4,6 @@ package com.mrj.system.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.mrj.model.system.SysMenu;
 import com.mrj.model.system.SysUser;
 import com.mrj.model.vo.RouterVo;
 import com.mrj.model.vo.SysUserQueryVo;

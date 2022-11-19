@@ -1,6 +1,7 @@
 package com.mrj.system.controller;
 
 import com.mrj.common.result.Result;
+import com.mrj.common.result.ResultCodeEnum;
 import com.mrj.common.utils.JwtHelper;
 import com.mrj.common.utils.MD5;
 import com.mrj.model.system.SysUser;
@@ -10,6 +11,7 @@ import com.mrj.system.service.SysUserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -46,6 +48,9 @@ public class IndexController {
         String token = request.getHeader("token");
         String userId = JwtHelper.getUserId(token);
         String username = JwtHelper.getUsername(token);
+        if (StringUtils.isEmpty(userId) || StringUtils.isEmpty(username)) {
+            return Result.build(null, ResultCodeEnum.LOGIN_AUTH, "用户未登录!");
+        }
         Map<String, Object> map = sysUserService.getUserInfo(userId, username);
         return Result.ok(map);
     }
