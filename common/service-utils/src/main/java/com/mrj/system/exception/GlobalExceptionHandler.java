@@ -4,7 +4,6 @@ import com.mrj.common.result.Result;
 import com.mrj.common.result.ResultCodeEnum;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 

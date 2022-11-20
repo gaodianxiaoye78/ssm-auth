@@ -11,11 +11,13 @@
         <module name="spring-security" />
         <module name="model" />
         <module name="common-utils" />
+        <module name="common-log" />
         <module name="system-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="common" target="1.8" />
+      <module name="common-log" target="1.8" />
       <module name="common-utils" target="1.8" />
       <module name="model" target="1.8" />
       <module name="service-utils" target="1.8" />
@@ -26,6 +28,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="common-log" options="-parameters" />
       <module name="common-utils" options="-parameters" />
       <module name="model" options="-parameters" />
       <module name="service-utils" options="-parameters" />

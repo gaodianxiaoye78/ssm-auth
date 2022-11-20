@@ -6,6 +6,8 @@ import com.mrj.common.result.Result;
 import com.mrj.model.system.SysRole;
 import com.mrj.model.vo.AssginRoleVo;
 import com.mrj.model.vo.SysRoleQueryVo;
+import com.mrj.system.anno.Log;
+import com.mrj.system.enums.BusinessType;
 import com.mrj.system.service.SysRoleService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -49,6 +51,7 @@ public class SysRoleController {
     }
 
 
+    @Log(title = "角色管理", businessType = BusinessType.DELETE)
     @PreAuthorize("hasAuthority('bnt.sysRole.remove')")
     @ApiOperation("逻辑删除角色信息")
     @DeleteMapping("deleteRole/{id}")
@@ -57,6 +60,7 @@ public class SysRoleController {
     }
 
 
+    @Log(title = "角色管理", businessType = BusinessType.UPDATE)
     @PreAuthorize("hasAuthority('bnt.sysRole.update')")
     @ApiOperation("修改角色信息")
     @PutMapping("modifyRole")
@@ -65,6 +69,7 @@ public class SysRoleController {
     }
 
 
+    @Log(title = "角色管理", businessType = BusinessType.INSERT)
     @PreAuthorize("hasAuthority('bnt.sysRole.add')")
     @ApiOperation("新增角色信息")
     @PostMapping("saveRole")

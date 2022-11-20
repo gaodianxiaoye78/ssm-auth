@@ -5,29 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e3a4a2d-1c9c-44a8-8cb7-73314262b75c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/common/spring-security/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/spring-security/src/main/java/com/mrj/system/config/WebSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/spring-security/src/main/java/com/mrj/system/custom/CustomMd5PasswordEncoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/spring-security/src/main/java/com/mrj/system/custom/CustomUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/spring-security/src/main/java/com/mrj/system/filter/TokenAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/spring-security/src/main/java/com/mrj/system/filter/TokenLoginFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/system-service/src/main/java/com/mrj/system/service/impl/UserDetailsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/common-utils/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/common-utils/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/common-utils/src/main/java/com/mrj/common/result/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/common-utils/src/main/java/com/mrj/common/result/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/common-utils/target/classes/com/mrj/common/result/Result.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/common-utils/target/classes/com/mrj/common/result/Result.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/common-log/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/common-log/src/main/java/com/mrj/system/anno/Log.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/common-log/src/main/java/com/mrj/system/aspect/LogAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/common-log/src/main/java/com/mrj/system/enums/BusinessType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/common-log/src/main/java/com/mrj/system/enums/OperatorType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/common-log/src/main/java/com/mrj/system/service/SysOperLogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/spring-security/src/main/java/com/mrj/system/service/SysLoginLogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/system-service/src/main/java/com/mrj/system/controller/SysLoginLogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/system-service/src/main/java/com/mrj/system/controller/SysOperLogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/system-service/src/main/java/com/mrj/system/mapper/SysLoginLogMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/system-service/src/main/java/com/mrj/system/mapper/SysOperLogMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/system-service/src/main/java/com/mrj/system/service/impl/SysLoginLogServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/system-service/src/main/java/com/mrj/system/service/impl/SysOperLogServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/common-utils/src/main/java/com/mrj/common/utils/IpUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/common-utils/src/main/java/com/mrj/common/utils/IpUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/common-utils/target/classes/com/mrj/common/utils/IpUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/common-utils/target/classes/com/mrj/common/utils/IpUtil.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/service-utils/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/service-utils/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/service-utils/src/main/java/com/mrj/system/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/service-utils/src/main/java/com/mrj/system/exception/GlobalExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/service-utils/target/classes/com/mrj/system/exception/GlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/service-utils/target/classes/com/mrj/system/exception/GlobalExceptionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/spring-security/src/main/java/com/mrj/system/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/spring-security/src/main/java/com/mrj/system/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/spring-security/src/main/java/com/mrj/system/filter/TokenLoginFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/spring-security/src/main/java/com/mrj/system/filter/TokenLoginFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/spring-security/target/classes/com/mrj/system/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/spring-security/target/classes/com/mrj/system/config/WebSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/spring-security/target/classes/com/mrj/system/filter/TokenLoginFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/spring-security/target/classes/com/mrj/system/filter/TokenLoginFilter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/system-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/system-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system-service/src/main/java/com/mrj/system/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/system-service/src/main/java/com/mrj/system/controller/IndexController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/system-service/src/main/java/com/mrj/system/controller/SysRoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/system-service/src/main/java/com/mrj/system/controller/SysRoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system-service/src/main/java/com/mrj/system/service/impl/SysUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/system-service/src/main/java/com/mrj/system/service/impl/SysUserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system-service/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/system-service/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system-service/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/system-service/target/classes/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system-service/target/classes/com/mrj/system/controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/system-service/target/classes/com/mrj/system/controller/IndexController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/system-service/target/classes/com/mrj/system/controller/SysRoleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/system-service/target/classes/com/mrj/system/controller/SysRoleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system-service/target/classes/com/mrj/system/service/impl/SysUserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/system-service/target/classes/com/mrj/system/service/impl/SysUserServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +42,7 @@
       <list>
         <option value="mapper" />
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -109,6 +113,9 @@
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.mrj.system.enums" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\IdeaProjects\ssm-auth\common\spring-security\src\main\java\com\mrj\system\filter" />
       <recent name="E:\IdeaProjects\ssm-auth\system-service\src\main\java\com\mrj\system\utils" />
@@ -207,7 +214,8 @@
       <workItem from="1668512940905" duration="3523000" />
       <workItem from="1668688582648" duration="2578000" />
       <workItem from="1668845265335" duration="390000" />
-      <workItem from="1668845810190" duration="8214000" />
+      <workItem from="1668845810190" duration="9323000" />
+      <workItem from="1668910978518" duration="6372000" />
     </task>
     <task id="LOCAL-00001" summary="1.完成分页查询&#10;2.完成统一异常处理">
       <created>1667717469979</created>
@@ -273,16 +281,5 @@
     <MESSAGE value="1.修改用户登录接口&#10;2.修改获取登录用户信息接口" />
     <MESSAGE value="1.修复了用户登录时密码校验的问题，用户密码进行MD5加密后再与数据库中的密码进行比对" />
     <option name="LAST_COMMIT_MESSAGE" value="1.修复了用户登录时密码校验的问题，用户密码进行MD5加密后再与数据库中的密码进行比对" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/common/spring-security/src/main/java/com/mrj/system/filter/TokenLoginFilter.java</url>
-          <line>63</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

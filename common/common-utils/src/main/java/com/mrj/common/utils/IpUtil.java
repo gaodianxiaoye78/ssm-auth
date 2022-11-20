@@ -6,6 +6,7 @@ import org.springframework.http.server.reactive.ServerHttpRequest;
 import javax.servlet.http.HttpServletRequest;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+import java.util.Objects;
 
 /**
  * 获取ip地址
@@ -32,7 +33,7 @@ public class IpUtil {
                     } catch (UnknownHostException e) {
                         e.printStackTrace();
                     }
-                    ipAddress = inet.getHostAddress();
+                    ipAddress = Objects.requireNonNull(inet).getHostAddress();
                 }
             }
             // 对于通过多个代理的情况，第一个IP为客户端真实IP,多个IP按照','分割
@@ -50,12 +51,12 @@ public class IpUtil {
         return ipAddress;
     }
 
-    public static String getGatwayIpAddress(ServerHttpRequest request) {
+    public static String getGatewayIpAddress(ServerHttpRequest request) {
         HttpHeaders headers = request.getHeaders();
         String ip = headers.getFirst("x-forwarded-for");
         if (ip != null && ip.length() != 0 && !"unknown".equalsIgnoreCase(ip)) {
             // 多次反向代理后会有多个ip值，第一个ip才是真实ip
-            if (ip.indexOf(",") != -1) {
+            if (ip.contains(",")) {
                 ip = ip.split(",")[0];
             }
         }
@@ -75,7 +76,7 @@ public class IpUtil {
             ip = headers.getFirst("X-Real-IP");
         }
         if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
-            ip = request.getRemoteAddress().getAddress().getHostAddress();
+            ip = Objects.requireNonNull(request.getRemoteAddress()).getAddress().getHostAddress();
         }
         return ip;
     }

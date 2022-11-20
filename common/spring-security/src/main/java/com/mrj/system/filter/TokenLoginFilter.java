@@ -4,11 +4,13 @@ import com.alibaba.fastjson.JSON;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mrj.common.result.Result;
 import com.mrj.common.result.ResultCodeEnum;
+import com.mrj.common.utils.IpUtil;
 import com.mrj.common.utils.JwtHelper;
 import com.mrj.common.utils.ResponseUtil;
 import com.mrj.model.system.SysUser;
 import com.mrj.model.vo.LoginVo;
 import com.mrj.system.custom.CustomUser;
+import com.mrj.system.service.SysLoginLogService;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.JdkSerializationRedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
@@ -31,16 +33,20 @@ public class TokenLoginFilter extends UsernamePasswordAuthenticationFilter {
 
     private final RedisTemplate<String, Object> redisTemplate;
 
-    public TokenLoginFilter(AuthenticationManager authenticationManager, RedisTemplate<String, Object> redisTemplate) {
+    private SysLoginLogService sysLoginLogService;
+
+    public TokenLoginFilter(AuthenticationManager authenticationManager, RedisTemplate<String, Object> redisTemplate,
+                            SysLoginLogService sysLoginLogService) {
         this.setAuthenticationManager(authenticationManager);
         this.setPostOnly(false);
         //指定登录接口及提交方式，可以指定任意路径
-        this.setRequiresAuthenticationRequestMatcher(new AntPathRequestMatcher("/admin/system/index/login","POST"));
+        this.setRequiresAuthenticationRequestMatcher(new AntPathRequestMatcher("/admin/system/index/login", "POST"));
         this.redisTemplate = redisTemplate;
         redisTemplate.setKeySerializer(new StringRedisSerializer());
         redisTemplate.setHashKeySerializer(new StringRedisSerializer());
         redisTemplate.setHashValueSerializer(new StringRedisSerializer());
         redisTemplate.setValueSerializer(new StringRedisSerializer());
+        this.sysLoginLogService = sysLoginLogService;
     }
 
     @Override
@@ -64,13 +70,15 @@ public class TokenLoginFilter extends UsernamePasswordAuthenticationFilter {
         redisTemplate.opsForValue().set(customUser.getUsername(), JSON.toJSONString(customUser.getAuthorities()));
         Map<String, Object> map = new HashMap<>();
         map.put("token", token);
+        sysLoginLogService.recordLogin(customUser.getUsername(), customUser.getSysUser().getStatus(),
+                IpUtil.getIpAddress(request), "登录成功");
         ResponseUtil.out(response, Result.ok(map));
     }
 
     @Override
     protected void unsuccessfulAuthentication(HttpServletRequest request, HttpServletResponse response,
                                               AuthenticationException e) throws IOException, ServletException {
-        if(e.getCause() instanceof RuntimeException) {
+        if (e.getCause() instanceof RuntimeException) {
             ResponseUtil.out(response, Result.build(null, ResultCodeEnum.DATA_ERROR, e.getMessage()));
         } else {
             ResponseUtil.out(response, Result.build(null, ResultCodeEnum.LOGIN_MOBLE_ERROR));
